@@ -1,0 +1,22 @@
+services:
+    jdr.event_recorder.recorder:
+        class: JDR\EventRecorder\EventRecorder
+        public: false
+
+    jdr.event_recorder.collect_from_entity:
+        class: JDR\EventRecorderDoctrineBridge\CollectEventsFromEntity
+        arguments:
+            - "@jdr.event_recorder.recorder"
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    jdr.event_recorder.dispatcher:
+        class: JDR\EventRecorderBundle\EventDispatcher\SymfonyEventDispatcher
+        arguments:
+            - "@event_dispatcher"
+
+    jdr.event_recorder.release_recorded_events:
+        class: JDR\EventRecorderTacticianBridge\ReleaseRecordedEvents
+        arguments:
+            - "@jdr.event_recorder.dispatcher"
+            - "@jdr.event_recorder.recorder"

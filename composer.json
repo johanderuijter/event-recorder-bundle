@@ -1,0 +1,49 @@
+{
+    "name": "jdr/event-recorder-bundle",
+    "type": "library",
+    "description": "Symfony bundle for jdr/event-recorder",
+    "keywords": [
+        "jdr",
+        "event-recorder-bundle"
+    ],
+    "homepage": "https://github.com/johanderuijter/event-recorder-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johan de Ruijter",
+            "email": "dev@johanderuijter.nl",
+            "homepage": "http://johanderuijter.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.0",
+        "jdr/event-recorder": "@dev",
+        "jdr/event-recorder-tactician-bridge": "@dev",
+        "jdr/event-recorder-doctrine-bridge": "@dev"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JDR\\EventRecorderBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\JDR\\EventRecorderBundle\\": "spec"
+        }
+    },
+    "scripts": {
+        "test": "bin/phpspec run"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

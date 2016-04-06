@@ -1,0 +1,4 @@
+suites:
+    EventRecorderBundle:
+        namespace: JDR\EventRecorderBundle
+        psr4_prefix: JDR\EventRecorderBundle
