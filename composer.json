@@ -18,9 +18,9 @@
     ],
     "require": {
         "php" : "~7.0",
-        "jdr/event-recorder": "@dev",
-        "jdr/event-recorder-tactician-bridge": "@dev",
-        "jdr/event-recorder-doctrine-bridge": "@dev"
+        "jdr/event-recorder": "^0.0.2",
+        "jdr/event-recorder-tactician-bridge": "^0.0.1",
+        "jdr/event-recorder-doctrine-bridge": "^0.0.1"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.5"
