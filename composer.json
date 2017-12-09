@@ -1,6 +1,6 @@
 {
     "name": "jdr/event-recorder-bundle",
-    "type": "library",
+    "type": "symfony-bundle",
     "description": "Symfony bundle for jdr/event-recorder",
     "keywords": [
         "jdr",
